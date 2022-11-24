@@ -32,7 +32,7 @@ class MainPage(Scene):
 
         self.wait(0.5)
 
-class Graff(Scene):
+class Graff(MovingCameraScene):
     def construct(self):
 
         runTime = 1.0
@@ -123,6 +123,33 @@ class Graff(Scene):
         ValDE = Text("6", font_size=16,).move_to((d.get_center()+e.get_center())/ 2 + [0.15, 0.15, 0])
 
         self.play(Write(ValAB), Write(ValAC), Write(ValAF), Write(ValBD), Write(ValBC), Write(ValCD), Write(ValCF), Write(ValFE), Write(ValDE))
+
+        self.play(self.camera.frame.animate.move_to(RIGHT* 3))
+
+        visitedText = Text("Visited = []", font_size=26).move_to([6,3,0])
+
+        unvisitedText = Text("Unvisited = [A, B, C, D, E, F]", font_size=26).move_to([6,2.5,0])
+
+        self.play(Write(visitedText), Write(unvisitedText))
+
+        t0 = Table(
+            [["0", "-"],
+            ["∞","-"],
+            ["∞","-"],
+            ["∞","-"],
+            ["∞","-"],
+            ["∞","-"]],
+            row_labels=[Text("A"), Text("B"), Text("C"), Text("D"), Text("E"), Text("F")],
+            col_labels=[Text("Shortest\ndistance\nfrom A"), Text("Previous\nvertex")],
+            top_left_entry=Text("Vertex")).move_to([6,-0.7,0]).scale(0.5)
+        #t0.add_highlighted_cell((2,2), color=GREEN)
+
+        self.play(FadeIn(t0))
+
+        lAB.set_color(YELLOW)
+
+
+
 
         self.wait(1)
 
