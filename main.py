@@ -99,9 +99,6 @@ class Graff(Scene):
         lCD= Line(c, d, z_index = -1)
         lCD.put_start_and_end_on(c.get_center(), d.get_center())
 
-        lCE= Line(c, e, z_index = -1)
-        lCE.put_start_and_end_on(c.get_center(), e.get_center())
-
         lCF= Line(c, f, z_index = -1)
         lCF.put_start_and_end_on(c.get_center(), f.get_center())
 
@@ -111,9 +108,25 @@ class Graff(Scene):
         lDE= Line(d, e, z_index = -1)
         lDE.put_start_and_end_on(d.get_center(), e.get_center())
 
-        self.play(Create(lBC), Create(lBD), Create(lCD), Create(lCE), Create(lCF), Create(lFE), Create(lDE))
+        self.play(Create(lBC), Create(lBD), Create(lCD), Create(lCF), Create(lFE), Create(lDE))
 
         self.wait(1)
+
+        ValAB = Text("7", font_size=16,).move_to((a.get_center()+b.get_center())/ 2 + [0.15, 0.15, 0])
+        ValAC = Text("9", font_size=16,).move_to((a.get_center()+c.get_center())/ 2 + [0.15, -0.15, 0])
+        ValAF = Text("14", font_size=16,).move_to((a.get_center()+f.get_center())/ 2 + [0.3, 0, 0])
+        ValBD = Text("15", font_size=16,).move_to((b.get_center()+d.get_center())/ 2 + [0.3, 0, 0])
+        ValBC = Text("10", font_size=16,).move_to((b.get_center()+c.get_center())/ 2 + [0.3, 0.15, 0])
+        ValCD = Text("11", font_size=16,).move_to((c.get_center()+d.get_center())/ 2 + [0, -0.15, 0])
+        ValCF = Text("2", font_size=16,).move_to((c.get_center()+f.get_center())/ 2 + [0.15, 0.15, 0])
+        ValFE = Text("9", font_size=16,).move_to((f.get_center()+e.get_center())/ 2 + [0.15, -0.15, 0])
+        ValDE = Text("6", font_size=16,).move_to((d.get_center()+e.get_center())/ 2 + [0.15, 0.15, 0])
+
+        self.play(Write(ValAB), Write(ValAC), Write(ValAF), Write(ValBD), Write(ValBC), Write(ValCD), Write(ValCF), Write(ValFE), Write(ValDE))
+
+        self.wait(1)
+
+
 
 
 
