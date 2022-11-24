@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/patrykmurzyn/Projects/PrezentacjaAlgorytmy/media/videos/main/1080p60/partial_movie_files/MainPage/2724823860_3066401776_223132457.mp4'
+file 'file:/home/patrykmurzyn/Projects/PrezentacjaAlgorytmy/media/videos/main/1080p60/partial_movie_files/MainPage/1164547788_103433702_528861312.mp4'
+file 'file:/home/patrykmurzyn/Projects/PrezentacjaAlgorytmy/media/videos/main/1080p60/partial_movie_files/MainPage/1164547788_3718460310_2325645433.mp4'
+file 'file:/home/patrykmurzyn/Projects/PrezentacjaAlgorytmy/media/videos/main/1080p60/partial_movie_files/MainPage/1164547788_3063249051_3573767342.mp4'
+file 'file:/home/patrykmurzyn/Projects/PrezentacjaAlgorytmy/media/videos/main/1080p60/partial_movie_files/MainPage/1164547788_1327194351_2325645433.mp4'
+file 'file:/home/patrykmurzyn/Projects/PrezentacjaAlgorytmy/media/videos/main/1080p60/partial_movie_files/MainPage/1164547788_3931794582_4209343063.mp4'
+file 'file:/home/patrykmurzyn/Projects/PrezentacjaAlgorytmy/media/videos/main/1080p60/partial_movie_files/MainPage/1164547788_1076466279_523288208.mp4'
