@@ -1,0 +1,2 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/patrykmurzyn/Projects/PrezentacjaAlgorytmy/media/videos/main/1080p60/partial_movie_files/CodeExample/2724823860_377493193_223132457.mp4'

@@ -488,3 +488,24 @@ class Graff(MovingCameraScene):
         self.play(FadeOut(equ))
 
         self.wait(1)
+
+class CodeExample(Scene):
+    def construct(self): 
+        code = '''Dijkstra(G,w,s):
+   dla każdego wierzchołka v w V[G] wykonaj
+      d[v] := nieskończoność
+      poprzednik[v] := niezdefiniowane
+   d[s] := 0
+   Q := V
+   dopóki Q niepuste wykonaj
+      u := Zdejmij_Min(Q)
+      dla każdego wierzchołka v – sąsiada u wykonaj
+         jeżeli d[v] > d[u] + w(u, v) to
+            d[v] := d[u] + w(u, v)
+            poprzednik[v] := u
+
+   Wyświetl("Droga wynosi: " + d[v])
+'''
+        rendered_code = Code(code=code, tab_width=4, background="window",
+                            language="Python", font="Monospace")
+        self.play(Create(rendered_code))
