@@ -266,9 +266,9 @@ class Graff(MovingCameraScene):
         t0.get_entries((3,2)).set_color(WHITE)
         t0.get_entries((3,3)).set_color(WHITE)
 
-        c.set_color(RED)
-        lAC.set_color(WHITE)
-        valAC.set_color(WHITE)
+        f.set_color(RED)
+        lAF.set_color(WHITE)
+        valAF.set_color(WHITE)
 
         c.set_color([YELLOW, GREEN])
         lBC.set_color(GREEN)
@@ -334,14 +334,157 @@ class Graff(MovingCameraScene):
 
 
 
+
+        t0.get_entries((4,1)).set_color(WHITE)
+        t0.get_entries((4,2)).set_color(WHITE)
+        t0.get_entries((4,3)).set_color(WHITE)
+
+        d.set_color(RED)
+        lBD.set_color(WHITE)
+        valBD.set_color(WHITE)
+
+        f.set_color([YELLOW, GREEN])
+        lCF.set_color(GREEN)
+        valCF.set_color([YELLOW, GREEN])
+        
+        self.play(FadeOut(equ))
+
+        equ = MathTex("9", "+", "2", "=", "11").move_to([-2,-3,0])
+        equ[4].set_color(YELLOW)
+        self.play(Write(equ))
+
+        data[0][5] = "11"
+        data[1][5] = "C"
+
+        self.remove(t0)
+        t0 = refreshTable(data)
+
+        t0.get_entries((7,2)).set_color(YELLOW)
+        t0.get_entries((7,3)).set_color(YELLOW)
+        self.add(t0)
+
+        self.wait(1)
+
+
+
+        f.set_color(RED)
+        lCF.set_color(WHITE)
+        valCF.set_color(WHITE)
+
+        d.set_color([YELLOW, GREEN])
+        lCD.set_color(GREEN)
+        valCD.set_color([YELLOW, GREEN])
+        
+        self.play(FadeOut(equ))
+
+        equ = MathTex("9", "+", "11", "=", "20", "< 22").move_to([-2,-3,0])
+        equ[5].set_color(RED)
+        equ[4].set_color(YELLOW)
+        self.play(Write(equ))
+
+        data[0][3] = "20"
+        data[1][3] = "C"
+
+        self.remove(t0)
+        t0 = refreshTable(data)
+
+        t0.get_entries((5,2)).set_color(YELLOW)
+        t0.get_entries((5,3)).set_color(YELLOW)
+        self.add(t0)
+
+        self.play(FadeOut(visitedText), FadeOut(unvisitedText))
+        visitedText = Text("Visited = [A, B, C]", font_size=26).move_to([6,3,0])
+        unvisitedText = Text("Unvisited = [D, E, F]", font_size=26).move_to([6,2.5,0])
+        self.play(FadeIn(visitedText), FadeIn(unvisitedText))
+
+        
+        t0.get_entries((5,2)).set_color(WHITE)
+        t0.get_entries((5,3)).set_color(WHITE)
+        t0.get_entries((7,1)).set_color(YELLOW)
+        t0.get_entries((7,2)).set_color(YELLOW)
+        t0.get_entries((7,3)).set_color(YELLOW)
+        self.play(FadeOut(equ))
+        equ = MathTex("7 < 9 < ",  "11", " < 20").move_to([-2,-3,0])
+        equ[1].set_color(YELLOW)
+        self.play(Write(equ))
+
+        self.wait(1)
+
         
 
 
 
+        d.set_color(RED)
+        lCD.set_color(WHITE)
+        valCD.set_color(WHITE)
 
+        e.set_color([YELLOW, GREEN])
+        lFE.set_color(GREEN)
+        valFE.set_color([YELLOW, GREEN])
+        
+        self.play(FadeOut(equ))
 
+        equ = MathTex("11", "+", "9", "=", "20").move_to([-2,-3,0])
+        equ[4].set_color(YELLOW)
+        self.play(Write(equ))
 
+        data[0][4] = "20"
+        data[1][4] = "E"
 
+        self.remove(t0)
+        t0 = refreshTable(data)
 
+        t0.get_entries((6,2)).set_color(YELLOW)
+        t0.get_entries((6,3)).set_color(YELLOW)
+        self.add(t0)
 
+        self.play(FadeOut(visitedText), FadeOut(unvisitedText))
+        visitedText = Text("Visited = [A, B, C, F]", font_size=26).move_to([6,3,0])
+        unvisitedText = Text("Unvisited = [D, E]", font_size=26).move_to([6,2.5,0])
+        self.play(FadeIn(visitedText), FadeIn(unvisitedText))
 
+        
+        t0.get_entries((6,2)).set_color(WHITE)
+        t0.get_entries((6,3)).set_color(WHITE)
+        t0.get_entries((5,1)).set_color(YELLOW)
+        t0.get_entries((5,2)).set_color(YELLOW)
+        t0.get_entries((5,3)).set_color(YELLOW)
+        self.play(FadeOut(equ))
+        equ = MathTex("7 < 9 < 11 < ", "20").move_to([-2,-3,0])
+        equ[1].set_color(YELLOW)
+        self.play(Write(equ))
+
+        self.wait(1)
+
+        
+        t0.get_entries((5,1)).set_color(WHITE)
+        t0.get_entries((5,2)).set_color(WHITE)
+        t0.get_entries((5,3)).set_color(WHITE)
+        e.set_color(RED)
+        lFE.set_color(WHITE)
+        valFE.set_color(WHITE)
+
+        e.set_color([YELLOW, GREEN])
+        lDE.set_color(GREEN)
+        valDE.set_color([YELLOW, GREEN])
+        
+        self.play(FadeOut(equ))
+
+        equ = MathTex("20", "+", "6", "=", "26", "< 20").move_to([-2,-3,0])
+        equ[4].set_color(YELLOW)
+        self.play(Write(equ))
+
+        self.play(FadeOut(visitedText), FadeOut(unvisitedText))
+        visitedText = Text("Visited = [A, B, C, F, D]", font_size=26).move_to([6,3,0])
+        unvisitedText = Text("Unvisited = [E]", font_size=26).move_to([6,2.5,0])
+        self.play(FadeIn(visitedText), FadeIn(unvisitedText))
+
+        
+        t0.get_entries((5,2)).set_color(WHITE)
+        t0.get_entries((5,3)).set_color(WHITE)
+        t0.get_entries((6,1)).set_color(YELLOW)
+        t0.get_entries((6,2)).set_color(YELLOW)
+        t0.get_entries((6,3)).set_color(YELLOW)
+        self.play(FadeOut(equ))
+
+        self.wait(1)
